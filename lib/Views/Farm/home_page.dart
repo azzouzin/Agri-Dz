@@ -7,6 +7,7 @@ import 'package:plantid/Views/Farm/farming_page.dart';
 import 'package:plantid/Views/Farm/store_page.dart';
 import 'package:plantid/Views/Farm/study_page.dart';
 
+import '../../AI/ai_screen.dart';
 import '../Weather/homePage.dart';
 import 'tomato_page.dart';
 
@@ -18,6 +19,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final pages = <Widget>[
+    HomePage(),
+    const FarmingPage(),
+    const StorePage(),
+    StudyPage(),
+    AiPage()
+  ];
   int index = 0;
   Controller controller = Get.put(Controller());
   @override
@@ -33,13 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: GetBuilder<Controller>(builder: (controller) {
-        return controller.index == 0
-            ? const FarmingPage()
-            : controller.index == 2
-                ? const StorePage()
-                : controller.index == 3
-                    ? HomePage()
-                    : const StudyPage();
+        return pages[controller.index];
       }),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: index,
@@ -67,6 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   Icons.sunny,
                 ),
                 label: 'المناخ'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.camera_enhance,
+                ),
+                label: 'الذكاء الاصطناعي'),
           ]),
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 

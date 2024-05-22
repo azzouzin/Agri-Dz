@@ -8,6 +8,7 @@ import 'package:plantid/Views/Farm/store_page.dart';
 import 'package:plantid/Views/Farm/study_page.dart';
 
 import '../../AI/ai_screen.dart';
+import '../../ChatGptChat/chat_page.dart';
 import '../Weather/homePage.dart';
 import 'tomato_page.dart';
 
@@ -24,7 +25,8 @@ class _MyHomePageState extends State<MyHomePage> {
     const FarmingPage(),
     const StorePage(),
     StudyPage(),
-    AiPage()
+    AiPage(),
+    ChatPage(),
   ];
   int index = 0;
   Controller controller = Get.put(Controller());
@@ -74,6 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   Icons.camera_enhance,
                 ),
                 label: 'الذكاء الاصطناعي'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.chair,
+                ),
+                label: 'الدردشة'),
           ]),
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 

@@ -1,4 +1,4 @@
-import 'package:chat_gpt_flutter/chat_gpt_flutter.dart';
+
 import 'package:flutter/material.dart';
 import 'package:plantid/ChatGptChat/completion_page.dart';
 

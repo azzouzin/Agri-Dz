@@ -4,6 +4,8 @@ import 'package:plantid/Views/Compenants/my_button.dart';
 import 'package:plantid/Views/Farm/info_page.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../ChatGptChat/chat_text/views/secondExample/chatGptSecondEcample.dart';
+
 class StudyPage extends StatefulWidget {
   const StudyPage({super.key});
 
@@ -72,7 +74,8 @@ class _StudyPageState extends State<StudyPage> {
               Mybutton(
                 text: "Ai",
                 function: () {
-                  openChatGpt(context: context);
+                  //  openChatGpt(context: context);
+                  Get.to(SectionChat());
                 },
                 iconData: Icons.integration_instructions,
               ),

@@ -42,7 +42,7 @@ class CardText extends StatelessWidget {
                 titel,
                 style: TextStyle(),
               ),
-              titel == 'التقرير'
+              titel == 'اقتراحات'
                   ? SizedBox(
                       width: Get.width * 0.6,
                       child: Text(
@@ -51,7 +51,7 @@ class CardText extends StatelessWidget {
                       ),
                     )
                   : SizedBox(
-                      width: Get.width * 0.2,
+                      width: Get.width * 0.6,
                       child: Text(
                         descreption,
                         style: TextStyle(),

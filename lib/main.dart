@@ -1,12 +1,18 @@
 import 'dart:io';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:plantid/Views/Farm/splash_screen.dart';
+import 'package:plantid/firebase_options.dart';
 
 GenerativeModel? model;
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   final apiKey = 'AIzaSyAmITm1cPmojAenF0hTJGcmmwi6Zm9IZJU';
   if (apiKey == null) {
     print('No \$API_KEY environment variable');
@@ -36,7 +42,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      home: SplashScreen(),
     );
   }
 }

@@ -8,6 +8,7 @@ import 'package:plantid/Views/Farm/store_page.dart';
 import 'package:plantid/Views/Farm/study_page.dart';
 
 import '../../AI/ai_screen.dart';
+import '../../ChatGptChat/chat_text/views/secondExample/chatGptSecondEcample.dart';
 import '../Weather/homePage.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -23,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
     const FarmingPage(),
     const StorePage(),
     StudyPage(),
-    AiPage(),
+    SectionChat(),
   ];
   int index = 0;
   Controller controller = Get.put(Controller());
@@ -70,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 label: 'المناخ'),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.camera_enhance,
+                  Icons.radio_button_unchecked,
                 ),
                 label: 'الذكاء الاصطناعي'),
           ]),

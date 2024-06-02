@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:plantid/AI/ai_screen.dart';
 import 'package:plantid/Views/Farm/call_page.dart';
 import 'package:plantid/Views/Farm/notes_page.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -142,7 +143,7 @@ class _FarmingPageState extends State<FarmingPage> {
             ],
           ),
           verticalpadding,
-          Column(
+          /*  Column(
             children: [
               const Text(
                 "معرفة حالة محصولك من مواعيد تسميد و حصاد",
@@ -174,6 +175,7 @@ class _FarmingPageState extends State<FarmingPage> {
               ),
             ],
           ),
+       */
           verticalpadding,
           Column(
             children: [
@@ -198,8 +200,8 @@ class _FarmingPageState extends State<FarmingPage> {
                   Mybutton(
                     text: "التقط صورة",
                     function: () async {
-                      await getImage();
-                      Get.to(TomatoExample());
+                      //  await getImage();
+                      Get.to(AiPage());
                     },
                     iconData: Icons.camera_alt_outlined,
                   ),

@@ -30,9 +30,11 @@ class _SectionChatState extends State<SectionChat> {
   Widget build(BuildContext context) {
     var chat = model!.startChat();
     return Scaffold(
-      /*  appBar: AppBar(
+      appBar: AppBar(
+        leading: Container(),
+        centerTitle: true,
         title: Text("المساعد الذكي"),
-      ),*/
+      ),
       body: Column(
         children: [
           Expanded(

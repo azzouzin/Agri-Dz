@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class StorePage extends StatefulWidget {
   const StorePage({super.key});
@@ -18,15 +19,30 @@ class _StorePageState extends State<StorePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            /*  const Text(
               "المتجر",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            storeItem('Red Apple', '1k , Percieg', '2000 DA', '')
+            ),*/
+            //   storeItem('Red Apple', '1k , Percieg', '2000 DA',''),
+            Center(
+              child: ElevatedButton(
+                onPressed: () => openUrl('https://agridz.dropify.shop/'),
+                child: const Text(
+                  "اذهب الى المتجر",
+                  style: TextStyle(color: Colors.green),
+                ),
+              ),
+            )
           ],
         ),
       )),
     );
+  }
+
+  void openUrl(String url) async {
+    await launchUrl(Uri.parse(
+      url,
+    ));
   }
 
   Widget storeItem(
@@ -123,7 +139,7 @@ class _StorePageState extends State<StorePage> {
                                   borderRadius: BorderRadius.circular(17),
                                 ),
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.add,
                                 color: Colors.white,
                               ),

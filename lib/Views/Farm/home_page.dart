@@ -20,10 +20,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final pages = <Widget>[
-    HomePage(),
     const FarmingPage(),
-    const StorePage(),
     StudyPage(),
+    const StorePage(),
+    HomePage(),
     SectionChat(),
   ];
   int index = 0;
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: Icon(
                   Icons.radio_button_unchecked,
                 ),
-                label: 'الذكاء الاصطناعي'),
+                label: 'المساعد الذكي'),
           ]),
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 /*

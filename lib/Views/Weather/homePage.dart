@@ -69,9 +69,6 @@ class CurrentWeather extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-
-
-                      
                       " " + currentTemp.location!,
                       style: const TextStyle(
                           fontWeight: FontWeight.bold,
@@ -136,6 +133,8 @@ class CurrentWeather extends StatelessWidget {
     }
   }
 }
+
+
 
 class TodayWeather extends StatelessWidget {
   @override
